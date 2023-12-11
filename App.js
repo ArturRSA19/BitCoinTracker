@@ -2,15 +2,20 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
 
+import CurrentPrice from './src/components/CurrentPrice';
+import HistoryGraphic from './src/components/HistoryGraphic';
+import QuotationsList from './src/components/QuotationsList';
+
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
       backgroundColor="#00E6D8"
       barStyle="dark-content"
-      translucent={true}
       />
-      <Text>Open up App.js to start working on your app!</Text>
+      <CurrentPrice />
+      <HistoryGraphic />
+      <QuotationsList />
     </SafeAreaView>
   );
 }
